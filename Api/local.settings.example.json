@@ -1,7 +1,7 @@
 {
   "IsEncrypted": false,
   "Values": {
-    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "AzureWebJobsStorage": "UseDevelopmentStorage=false",
     "FUNCTIONS_WORKER_RUNTIME": "dotnet"
   },
   "Host": {
