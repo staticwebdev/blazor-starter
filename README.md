@@ -6,7 +6,7 @@ This template contains an example .NET 6 [Blazor WebAssembly](https://docs.micro
 
 1. Create a repository from the [GitHub template](https://docs.github.com/en/enterprise/2.22/user/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template) and then clone it locally to your machine.
 
-1. In the **API** folder, copy `local.settings.example.json` to `local.settings.json`
+1. In the **Api** folder, copy `local.settings.example.json` to `local.settings.json`
 
 1. Continue using either Visual Studio or Visual Studio Code.
 
@@ -39,8 +39,9 @@ Once you clone the project, open the solution in [Visual Studio 2022](https://vi
 ## Template Structure
 
 - **Client**: The Blazor WebAssembly sample application
-- **API**: A C# Azure Functions API, which the Blazor application will call
+- **Api**: A C# Azure Functions API, which the Blazor application will call
 - **Shared**: A C# class library with a shared data model between the Blazor and Functions application
+- **ApiIsolated**: A C# Azure Functions API using the .NET isolated execution model, which the Blazor application will call. This version can be used instead of the in-process function app in `Api`.
 
 ## Deploy to Azure Static Web Apps
 
