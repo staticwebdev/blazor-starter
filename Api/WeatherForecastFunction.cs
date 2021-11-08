@@ -26,7 +26,7 @@ namespace BlazorApp.Api
             }
             else if (temp <= 0)
             {
-                summary = "Freezing";
+                summary = "Freezing!";
             }
 
             return summary;
