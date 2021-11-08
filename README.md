@@ -20,7 +20,7 @@ Once you clone the project, open the solution in [Visual Studio 2022](https://vi
 
 ### Visual Studio Code with Azure Static Web Apps CLI
 
-1. Install the [Azure Static Web Apps CLI]() and [Azure Functions Core Tools CLI]().
+1. Install the [Azure Static Web Apps CLI](https://www.npmjs.com/package/@azure/static-web-apps-cli) and [Azure Functions Core Tools CLI](https://www.npmjs.com/package/azure-functions-core-tools).
 
 1. Open the folder in Visual Studio Code.
 
