@@ -5,6 +5,7 @@
     <RootNamespace>BlazorApp.Api</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="6.0.0" />
     <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="4.0.1" />
   </ItemGroup>
   <ItemGroup>
