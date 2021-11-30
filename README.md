@@ -14,6 +14,14 @@ This template contains an example .NET 6 [Blazor WebAssembly](https://docs.micro
 
 Once you clone the project, open the solution in [Visual Studio 2022](https://visualstudio.microsoft.com/vs/) and follow these steps:
 
+1. Right-click on the solution and select **Set Startup Projects...**.
+
+1. Select **Multiple startup projects** and set the following actions for each project:
+    - *Api* - **Start**
+    - *ApiIsolated* - None
+    - *Client* - **Start**
+    - *Shared* - None
+
 1. Press **F5** to launch both the client application and the Functions API app. In Visual Studio, you can right click the solution and select both API project and client project as startup projects. 
 
     _Note: If you're using the Azure Functions CLI tools, refer to [the documentation](https://docs.microsoft.com/azure/azure-functions/functions-run-local?tabs=windows%2Ccsharp%2Cbash) on how to enable CORS._
