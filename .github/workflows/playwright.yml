@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: PLaywright tests
+name: Playwright tests
 
 # Controls when the workflow will run
 on:
@@ -38,7 +38,7 @@ jobs:
     - name: Install Playwright
       run: npx playwright install --with-deps
     - name: Install Azure static web apps
-      run: npm install @azure/static-web-apps-cli
+      run: npm install -g @azure/static-web-apps-cli
     - name: Install Azure function apps
       run: npm i -g azure-functions-core-tools@3 --unsafe-perm true
     - name: Start web app and function app
