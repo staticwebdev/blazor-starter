@@ -41,7 +41,5 @@ jobs:
       run: npm install -g @azure/static-web-apps-cli
     - name: Install Azure function apps
       run: npm i -g azure-functions-core-tools@3 --unsafe-perm true
-    - name: Start web app and function app
-      run: swa start http://localhost:5000 --run "dotnet run --project Client/Client.csproj" --api-location Api
     - name: Run your tests
-      run: npx playwright test
+      run: npm run playwright_test

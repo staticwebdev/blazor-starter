@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "This template contains an example .NET 6 [Blazor WebAssembly](https://docs.microsoft.com/aspnet/core/blazor/?view=aspnetcore-6.0#blazor-webassembly) client application, a .NET 6 C# [Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-overview), and a C# class library with shared code.",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "start": "swa start http://localhost:5000 --run 'dotnet run --project Client/Client.csproj' --api-location Api",
+    "playwright_test" : "playwright test"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/HannahZhuSWE/blazor-starter.git"
@@ -17,5 +20,8 @@
   "homepage": "https://github.com/HannahZhuSWE/blazor-starter#readme",
   "devDependencies": {
     "@playwright/test": "^1.22.2"
+  },
+  "dependencies": {
+    "sirv-cli": "^2.0.2"
   }
 }
