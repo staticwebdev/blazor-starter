@@ -1,24 +1,11 @@
 {
   "name": "blazor-starter",
   "version": "1.0.0",
-  "description": "This template contains an example .NET 6 [Blazor WebAssembly](https://docs.microsoft.com/aspnet/core/blazor/?view=aspnetcore-6.0#blazor-webassembly) client application, a .NET 6 C# [Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-overview), and a C# class library with shared code.",
-  "main": "index.js",
   "scripts": {
     "start": "swa start http://localhost:5000 --run 'dotnet run --project Client/Client.csproj' --api-location Api",
     "playwright_test" : "playwright test"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/staticwebdev/blazor-starter.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/staticwebdev/blazor-starter/issues"
-  },
-  "homepage": "https://github.com/staticwebdev/blazor-starter#readme",
-  "devDependencies": {
+ "devDependencies": {
     "@playwright/test": "^1.22.2"
   },
   "dependencies": {
