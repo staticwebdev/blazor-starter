@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HannahZhuSWE/blazor-starter.git"
+    "url": "git+https://github.com/staticwebdev/blazor-starter.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/HannahZhuSWE/blazor-starter/issues"
+    "url": "https://github.com/staticwebdev/blazor-starter/issues"
   },
-  "homepage": "https://github.com/HannahZhuSWE/blazor-starter#readme",
+  "homepage": "https://github.com/staticwebdev/blazor-starter#readme",
   "devDependencies": {
     "@playwright/test": "^1.22.2"
   },
