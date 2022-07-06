@@ -340,3 +340,6 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+/test-results/
+/playwright-report/
+/playwright/.cache/
