@@ -2,7 +2,7 @@
 
 This template contains an example .NET 7 [Blazor WebAssembly](https://docs.microsoft.com/aspnet/core/blazor/?view=aspnetcore-6.0#blazor-webassembly) client application, a .NET 7 C# [Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-overview), and a C# class library with shared code.
 
-> Note: Azure Functions only supports .NET 7 in the isolated process execution model (`ApiIsolated` project). The in-process function app in the `Api` project is in .NET 6). 
+> Note: Azure Functions only supports .NET 7 in the isolated process execution model
 
 ## Getting Started
 
@@ -19,8 +19,7 @@ Once you clone the project, open the solution in the latest release of [Visual S
 1. Right-click on the solution and select **Set Startup Projects...**.
 
 1. Select **Multiple startup projects** and set the following actions for each project:
-    - *Api* - None
-    - *ApiIsolated* - **Start**
+    - *Api* - **Start**
     - *Client* - **Start**
     - *Shared* - None
 
@@ -49,7 +48,6 @@ Once you clone the project, open the solution in the latest release of [Visual S
 - **Client**: The Blazor WebAssembly sample application
 - **Api**: A C# Azure Functions API, which the Blazor application will call
 - **Shared**: A C# class library with a shared data model between the Blazor and Functions application
-- **ApiIsolated**: A C# Azure Functions API using the .NET isolated execution model, which the Blazor application will call. This version can be used instead of the in-process function app in `Api`.
 
 ## Deploy to Azure Static Web Apps
 
