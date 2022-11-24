@@ -1,24 +1,26 @@
 # Blazor Starter Application
 
-This template contains an example .NET 6 [Blazor WebAssembly](https://docs.microsoft.com/aspnet/core/blazor/?view=aspnetcore-6.0#blazor-webassembly) client application, a .NET 6 C# [Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-overview), and a C# class library with shared code.
+This template contains an example .NET 7 [Blazor WebAssembly](https://docs.microsoft.com/aspnet/core/blazor/?view=aspnetcore-6.0#blazor-webassembly) client application, a .NET 7 C# [Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-overview), and a C# class library with shared code.
+
+> Note: Azure Functions only supports .NET 7 in the isolated process execution model (`ApiIsolated` project). The in-process function app in the `Api` project is in .NET 6). 
 
 ## Getting Started
 
 1. Create a repository from the [GitHub template](https://docs.github.com/en/enterprise/2.22/user/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template) and then clone it locally to your machine.
 
-1. In the **Api** folder, copy `local.settings.example.json` to `local.settings.json`
+1. In the **ApiIsolated** folder, copy `local.settings.example.json` to `local.settings.json`
 
 1. Continue using either Visual Studio or Visual Studio Code.
 
 ### Visual Studio 2022
 
-Once you clone the project, open the solution in [Visual Studio 2022](https://visualstudio.microsoft.com/vs/) and follow these steps:
+Once you clone the project, open the solution in the latest release of [Visual Studio 2022](https://visualstudio.microsoft.com/vs/) with the Azure workload installed, and follow these steps:
 
 1. Right-click on the solution and select **Set Startup Projects...**.
 
 1. Select **Multiple startup projects** and set the following actions for each project:
-    - *Api* - **Start**
-    - *ApiIsolated* - None
+    - *Api* - None
+    - *ApiIsolated* - **Start**
     - *Client* - **Start**
     - *Shared* - None
 
