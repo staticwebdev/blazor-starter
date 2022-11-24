@@ -25,19 +25,21 @@ Once you clone the project, open the solution in the latest release of [Visual S
 
 1. Press **F5** to launch both the client application and the Functions API app.
 
-### Visual Studio Code with Azure Static Web Apps CLI
+### Visual Studio Code with Azure Static Web Apps CLI for a better development experience (Optional)
 
 1. Install the [Azure Static Web Apps CLI](https://www.npmjs.com/package/@azure/static-web-apps-cli) and [Azure Functions Core Tools CLI](https://www.npmjs.com/package/azure-functions-core-tools).
 
 1. Open the folder in Visual Studio Code.
 
+1. Delete file `Client/wwwroot/appsettings.Development.json`
+
 1. In the VS Code terminal, run the following command to start the Static Web Apps CLI, along with the Blazor WebAssembly client application and the Functions API app:
 
     ```bash
-    swa start http://localhost:5000 --run "dotnet run --project Client/Client.csproj" --api-location Api
+    swa start http://localhost:5000 --api-location http://localhost:7071
     ```
 
-    The Static Web Apps CLI (`swa`) first starts the Blazor WebAssembly client application and connects to it at port 5000, and then starts the Functions API app.
+    The Static Web Apps CLI (`swa`) starts a proxy on port 4280 that will forward static site requests to the Blazor server on port 5000 and requests to the `/api` endpoint to the Functions server. 
 
 1. Open a browser and navigate to the Static Web Apps CLI's address at `http://localhost:4280`. You'll be able to access both the client application and the Functions API app in this single address. When you navigate to the "Fetch Data" page, you'll see the data returned by the Functions API app.
 
