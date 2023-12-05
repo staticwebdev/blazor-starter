@@ -1,14 +1,12 @@
 # Blazor Starter Application
 
-This template contains an example .NET 7 [Blazor WebAssembly](https://docs.microsoft.com/aspnet/core/blazor/?view=aspnetcore-6.0#blazor-webassembly) client application, a .NET 7 C# [Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-overview), and a C# class library with shared code.
-
-> Note: Azure Functions only supports .NET 7 in the isolated process execution model
+This template contains an example .NET 8 [Blazor WebAssembly](https://docs.microsoft.com/aspnet/core/blazor/?view=aspnetcore-6.0#blazor-webassembly) client application, a .NET 8 C# [Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-overview), and a C# class library with shared code.
 
 ## Getting Started
 
 1. Create a repository from the [GitHub template](https://docs.github.com/en/enterprise/2.22/user/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template) and then clone it locally to your machine.
 
-1. In the **ApiIsolated** folder, copy `local.settings.example.json` to `local.settings.json`
+1. In the **Api** folder, copy `local.settings.example.json` to `local.settings.json`
 
 1. Continue using either Visual Studio or Visual Studio Code.
 
@@ -16,7 +14,7 @@ This template contains an example .NET 7 [Blazor WebAssembly](https://docs.micro
 
 Once you clone the project, open the solution in the latest release of [Visual Studio 2022](https://visualstudio.microsoft.com/vs/) with the Azure workload installed, and follow these steps:
 
-1. Right-click on the solution and select **Set Startup Projects...**.
+1. Right-click on the solution and select **Configure Startup Projects...**.
 
 1. Select **Multiple startup projects** and set the following actions for each project:
     - *Api* - **Start**
@@ -27,7 +25,7 @@ Once you clone the project, open the solution in the latest release of [Visual S
 
 ### Visual Studio Code with Azure Static Web Apps CLI for a better development experience (Optional)
 
-1. Install the [Azure Static Web Apps CLI](https://www.npmjs.com/package/@azure/static-web-apps-cli) and [Azure Functions Core Tools CLI](https://www.npmjs.com/package/azure-functions-core-tools).
+1. Install (or update) the [Azure Static Web Apps CLI](https://www.npmjs.com/package/@azure/static-web-apps-cli) and [Azure Functions Core Tools CLI](https://www.npmjs.com/package/azure-functions-core-tools).
 
 1. Open the folder in Visual Studio Code.
 
@@ -35,6 +33,17 @@ Once you clone the project, open the solution in the latest release of [Visual S
 
 1. In the VS Code terminal, run the following command to start the Static Web Apps CLI, along with the Blazor WebAssembly client application and the Functions API app:
 
+    In the Client folder, run:
+    ```bash
+    dotnet run
+    ```
+
+    In the API folder, run:
+    ```bash
+    func start
+    ```
+
+    In another terminal, run:
     ```bash
     swa start http://localhost:5000 --api-location http://localhost:7071
     ```

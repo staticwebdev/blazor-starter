@@ -2,7 +2,7 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
-			"label": "clean",
+			"label": "clean (functions)",
 			"command": "dotnet",
 			"args": [
 				"clean",
@@ -16,7 +16,7 @@
 			}
 		},
 		{
-			"label": "build",
+			"label": "build (functions)",
 			"command": "dotnet",
 			"args": [
 				"build",
@@ -24,7 +24,7 @@
 				"/consoleloggerparameters:NoSummary"
 			],
 			"type": "process",
-			"dependsOn": "clean",
+			"dependsOn": "clean (functions)",
 			"group": {
 				"kind": "build",
 				"isDefault": true
@@ -35,7 +35,7 @@
 			}
 		},
 		{
-			"label": "clean release",
+			"label": "clean release (functions)",
 			"command": "dotnet",
 			"args": [
 				"clean",
@@ -51,7 +51,7 @@
 			}
 		},
 		{
-			"label": "publish",
+			"label": "publish (functions)",
 			"command": "dotnet",
 			"args": [
 				"publish",
@@ -61,7 +61,7 @@
 				"/consoleloggerparameters:NoSummary"
 			],
 			"type": "process",
-			"dependsOn": "clean release",
+			"dependsOn": "clean release (functions)",
 			"problemMatcher": "$msCompile",
 			"options": {
 				"cwd": "${workspaceFolder}/Api"
@@ -69,13 +69,13 @@
 		},
 		{
 			"type": "func",
-			"dependsOn": "build",
+			"dependsOn": "build (functions)",
 			"options": {
-				"cwd": "${workspaceFolder}/Api/bin/Debug/net6.0"
+				"cwd": "${workspaceFolder}/Api/bin/Debug/net8.0"
 			},
 			"command": "host start",
 			"isBackground": true,
-			"problemMatcher": "$func-watch"
+			"problemMatcher": "$func-dotnet-watch"
 		}
 	]
 }
